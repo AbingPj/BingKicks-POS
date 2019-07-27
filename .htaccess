@@ -1,0 +1,13 @@
+
+# HTID:7069979: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+Header add Access-Control-Allow-Origin "*"
+#Header add Access-Control-Allow-Methods: POST, GET, OPTIONS
+#SetEnv TZ Asia/Manila
+
+#RewriteEngine on
+#RewriteCond %{HTTP_REFERER} !https://zensushi-inv.000webhostapp.com/.* [NC]
+#RewriteRule ^.*js$ - [F]
+
+
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:7069979:
