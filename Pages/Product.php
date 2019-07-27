@@ -169,7 +169,7 @@ include 'db.php';
                  {?>
                <div class='col-sm-3 '>
                 <div class='thumbnail'>
-                 <img style='width: 150px; height: 100px' src='assets/img/<?php echo $row['img_name'];?>' alt='Cinque Terre' width='300' height='236'>
+                 <img style='width: 150px; height: 100px' src='../assets/img/<?php echo $row['img_name'];?>' alt='Cinque Terre' width='300' height='236'>
                  <div class='caption'>
                    <p><b><?php echo $row['name'];     ?> </b>
                     <br><?php echo $row['price'];      ?> </p>
@@ -200,7 +200,7 @@ include 'db.php';
              {?>
            <div class='col-sm-3 '>
             <div class='thumbnail'>
-             <img style='width: 150px; height: 100px' src='assets/img/<?php echo $row['img_name'];?>' alt='Cinque Terre' width='300' height='236'>
+             <img style='width: 150px; height: 100px' src='../assets/img/<?php echo $row['img_name'];?>' alt='Cinque Terre' width='300' height='236'>
              <div class='caption'>
                <p><b><?php echo $row['name'];     ?> </b>
                 <br><?php echo $row['price'];      ?> </p>
@@ -233,7 +233,7 @@ include 'db.php';
        {?>
      <div class='col-sm-3 '>
       <div class='thumbnail'>
-       <img style='width: 150px; height: 100px' src='assets/img/<?php echo $row['img_name'];?>' alt='Cinque Terre' width='300' height='236'>
+       <img style='width: 150px; height: 100px' src='../assets/img/<?php echo $row['img_name'];?>' alt='Cinque Terre' width='300' height='236'>
        <div class='caption'>
          <p><b><?php echo $row['name'];     ?> </b>
           <br><?php echo $row['price'];      ?> </p>
