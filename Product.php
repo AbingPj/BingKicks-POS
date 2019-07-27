@@ -2,7 +2,7 @@
 session_start();
 $numnum = 1;
 if($_SESSION['AdminLog'] != $numnum){
-header("Location: Log-IN.php");
+header("Location: index.php");
 }
 
 include 'db.php';
