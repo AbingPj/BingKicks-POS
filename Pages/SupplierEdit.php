@@ -46,7 +46,7 @@ header("Location: index.php");
         </ul>
         <ul class="nav navbar-nav navbar-right">
 
-          <li><a href="Log-OUT.php">
+          <li><a href="../Controllers/DataBaseController/log-out.php">
             <?php 
             echo "".$_SESSION['Name']."  ";
             ?>

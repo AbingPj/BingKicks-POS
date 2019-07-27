@@ -6,7 +6,7 @@ if($_SESSION['AdminLog'] != $numnum){
 header("Location: index.php");
 }
 
-include 'db.php';
+include '../Controllers/DataBaseController/db.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +47,7 @@ include 'db.php';
         </ul>
         <ul class="nav navbar-nav navbar-right">
 
-          <li><a href="Log-OUT.php">
+          <li><a href="../Controllers/DataBaseController/log-out.php">
             <?php 
             echo "".$_SESSION['Name']."  ";
             ?>
