@@ -69,7 +69,7 @@ include '../Controllers/DataBaseController/db.php';
 
 
 						<div class="col-xs-9  col-xs-offset-2" style="background-color:;">
-							<form action="supplierinsert.php" method="post">
+							<form action="../Controllers/SupplierController/SupplierInsert.php" method="post">
 								<fieldset class="scheduler-border">
 									<legend>Add Supplier</legend>
 									<label>Supplier Company Name:</label>
