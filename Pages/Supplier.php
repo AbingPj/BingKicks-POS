@@ -118,7 +118,7 @@ include '../Controllers/DataBaseController/db.php';
 									while($row = mysqli_fetch_array($result)){
 										
 										?>
-										<form action="SupplierEditRemove.php" method="post">
+										<form action="../Controllers/SupplierController/SupplierEditRemove.php" method="post">
 											<input type="hidden" name="id" value="<?php echo $row['id']; ?>"/>
 											<input type="hidden" name="name" value="<?php echo $row['name']; ?>"/>
 											<input type="hidden" name="phone" value="<?php echo $row['phone']; ?>"/>
