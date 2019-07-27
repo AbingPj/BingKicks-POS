@@ -99,7 +99,7 @@ include 'db.php';
 						<h3>Suppliers</h3> 
 						<div class="scrollable">           
 							<table class="table table-hover table-bordered" style=" border-style: solid; border-width: medium; border-color:blue;">
-								<thead>
+								<thead style="background-color:green;">
 									<tr>
 										<th>Supplier Company Name</th>
 										<th>Phone</th>
