@@ -86,7 +86,7 @@ include '../Controllers/DataBaseController/db.php';
             <h4>Add your new shoes product:</h4>  
 
             <div class="col-xs-10" style="background-color:;">
-             <form action="ProductAdd.php" method="post" enctype="multipart/form-data">
+             <form action="../Controllers/ProductController/ProductAdd.php" method="post" enctype="multipart/form-data">
                Shoes Name:
                <br> 
                <input type="text" name="name" class="form-control">
@@ -291,7 +291,7 @@ include '../Controllers/DataBaseController/db.php';
    <div class="modal-body">  
 
 
-    <form action="ProductUpdateDetailsAndImage.php" method="post"  enctype="multipart/form-data">  
+    <form action="../Controllers/ProductController/ProductUpdateDetailsAndImage.php" method="post"  enctype="multipart/form-data">  
       <input type="hidden" name="product_id" id="product_id" >  
 
 
@@ -376,7 +376,7 @@ include '../Controllers/DataBaseController/db.php';
   $(document).on('click', '.edit_data', function(){  
    var product_id = $(this).attr("id");  
    $.ajax({  
-    url:"fetch.php",  
+    url:"../Controllers/ProductController/fetch.php",  
     method:"POST",  
     data:{product_id:product_id},  
     dataType:"json",  
