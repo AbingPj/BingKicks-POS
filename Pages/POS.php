@@ -96,7 +96,7 @@ include '../Controllers/DataBaseController/db.php';
                        <div class='caption'>
                          <p><b><?php echo $row['name'];     ?> </b>
                           <br><?php echo $row['price'];      ?> </p>
-                          <form method="post" action="POSaddtokart.php">
+                          <form method="post" action="../Controllers/POSController/POSaddtokart.php">
                           <input type="hidden" name="id" value="<?php echo $row['id']; ?>" >
                           <input type="submit" name="submit" value="add" class="btn btn-info btn-xs">
                           </form>
@@ -130,7 +130,7 @@ include '../Controllers/DataBaseController/db.php';
                    <div class='caption'>
                      <p><b><?php echo $row['name'];     ?> </b>
                       <br><?php echo $row['price'];      ?> </p>
-                        <form method="post" action="POSaddtokart.php">
+                        <form method="post" action="../Controllers/POSController/POSaddtokart.php">
                           <input type="hidden" name="id" value="<?php echo $row['id']; ?>" >
                           <input type="submit" name="submit" value="add" class="btn btn-info btn-xs">
                           </form>
@@ -161,7 +161,7 @@ include '../Controllers/DataBaseController/db.php';
                    <div class='caption'>
                      <p><b><?php echo $row['name'];     ?> </b>
                       <br><?php echo $row['price'];      ?> </p>
-                        <form method="post" action="POSaddtokart.php">
+                        <form method="post" action="../Controllers/POSController/POSaddtokart.php">
                           <input type="hidden" name="id" value="<?php echo $row['id']; ?>" >
                           <input type="submit" name="submit" value="add" class="btn btn-info btn-xs">
                           </form>
@@ -212,7 +212,7 @@ include '../Controllers/DataBaseController/db.php';
           <center>
             <?php echo " ".$row['id'] ?>
           <br>
-           <form method="post" action="POSremove.php">
+           <form method="post" action="../Controllers/POSController/POSremove.php">
            <input type="hidden" name="id" value="<?php echo $row['id']; ?>" >
           <input type="submit" name="remove" value="remove" class="btn btn-info btn-xs">
          
@@ -234,7 +234,7 @@ include '../Controllers/DataBaseController/db.php';
         <h4 class="modal-title" id="myModalLabel">Change Quantity</h4>
       </div>
       <div class="modal-body">
-      <form method="post" action="POSupdate.php"><center>
+      <form method="post" action="../Controllers/POSController/POSupdate.php"><center>
       <input type="hidden" name="id" value="<?php echo $row['id']; ?>" >
       <input type="number" name="quantity" value="<?php echo $row['quantity']; ?>" >  
       <input type="submit" name="update" value="save changes" class="btn btn-info btn-xs"></center>
@@ -263,12 +263,12 @@ include '../Controllers/DataBaseController/db.php';
                            echo "<font size='3' class='bg-danger' > $Message </font>";
             }
      ?></h2>
-  <form method="post" action="POSpaymentAndcancel.php">
+  <form method="post" action="../Controllers/POSController/POSpaymentAndcancel.php">
     <input type="number" name="cash" class="input-md form-control" placeholder="Customer Cash" required>
     <input type="submit" name="submitcash" value="PAY" class="btn btn-lg btn-primary btn-block">
     
   </form>
-  <form method="post" action="POSpaymentAndcancel.php">
+  <form method="post" action="../Controllers/POSController/POSpaymentAndcancel.php">
       <input type="submit" name="submitcancel" value="CANCEL" class="btn btn-sm btn-danger btn-block">
    </form>
 
