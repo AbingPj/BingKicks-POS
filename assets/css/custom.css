@@ -1,0 +1,24 @@
+.page-title{
+	color:blue;
+}
+
+.scrollable{
+	height: 450px;
+	overflow: scroll;
+}
+
+.scrollable2{
+	height: 400px;
+	overflow: scroll;
+}
+
+
+
+.my-color{
+	background-color: lightblue;
+}
+.my-color2{
+	background-color: red;
+}
+
+
