@@ -72,7 +72,7 @@ header("Location: ../index.php");
   
 
             <div class="col-xs-10-fluid  col-xs-offset-1" style="background-color:;">
-              <form action="SupplierEditUpdate.php" method="post">
+              <form action="../Controllers/SupplierController/SupplierEditUpdate.php" method="post">
                 <fieldset class="scheduler-border">
                   <legend>Supplier:</legend>
                   <label>New Supplier Company Name:</label>

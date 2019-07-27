@@ -1,5 +1,5 @@
 <?php
-include 'db.php';
+include '../../Controllers/DataBaseController/db.php';
 
 if(isset($_POST['update'])){
 	$id = $_POST['id'];
@@ -7,7 +7,7 @@ if(isset($_POST['update'])){
 	$phone = $_POST['phone'];
     $query="UPDATE supplier SET name = '$name' , phone = '$phone' WHERE id = '$id'";
 	mysqli_query($db,$query);
-	header( "Location: Supplier.php" ); 
+	header( "Location: ../../Pages/Supplier.php" ); 
 }
 
 ?>
