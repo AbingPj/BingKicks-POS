@@ -30,14 +30,14 @@ include '../Controllers/DataBaseController/db.php';
     <div class="container">
 
       <div class="navbar-header">
-        <a class="navbar-brand" href="pos.php">
+        <a class="navbar-brand" href="POS.php">
           <font size=6>BingKicks</font>Point of Sale
         </a>
       </div>
       <ul class="nav navbar-nav">
 
         <li class="active">
-          <a href="pos.php"><span class="glyphicon glyphicon-home"></span></a>
+          <a href="POS.php"><span class="glyphicon glyphicon-home"></span></a>
         </li>
 
         <li class="dropdown">
@@ -77,12 +77,8 @@ include '../Controllers/DataBaseController/db.php';
       <div role="tabpanel" class="tab-pane active" id="Sales">
 
 
-
-
         <div class="row">
-
           <form method="post" action="">
-
             <div class="col-sm-10 col-sm-offset-1">
               <h1>Sales </h1>
               <div class="col-xs-3">
@@ -96,15 +92,11 @@ include '../Controllers/DataBaseController/db.php';
                 <input type="submit" name="submit1" value="submit" class="btn btn-info" />
               </div>
             </div>
-
-
           </form>
 
           <div class="row">
             <div class="col-md-12" style="background-color:">
-
               <table class="table table-hover" style="border-style: solid; border-width: medium; border-color:deepskyblue;">
-
                 <thead>
                   <tr>
                     <th></th>
@@ -115,10 +107,7 @@ include '../Controllers/DataBaseController/db.php';
                   </tr>
                 </thead>
                 <tbody>
-
                   <?php 
-
-
                   $_SESSION['totals2'] = 0;
              //$query="SELECT * from salesview ORDER BY sales_number";
                   if (isset($_POST['submit1'])) {
