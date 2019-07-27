@@ -14,8 +14,8 @@ include 'db.php';
 <head>
 	<meta charset="UTF-8">
 	<title>BingKicks Supplier</title>
-	<link rel="stylesheet"  href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet"  href="assets/css/custom.css">
+	<link rel="stylesheet"  href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet"  href="../assets/css/custom.css">
 </head>
 <body>
 
@@ -162,7 +162,7 @@ include 'db.php';
 &copy;2017 BingKicks POS </p></center>
 
 </footer>
-			<script src="assets/js/jquery-3.2.1.min.js"></script>
-			<script src="assets/js/bootstrap.min.js"></script>
+			<script src="../assets/js/jquery-3.2.1.min.js"></script>
+			<script src="../assets/js/bootstrap.min.js"></script>
 		</body>
 		</html>
