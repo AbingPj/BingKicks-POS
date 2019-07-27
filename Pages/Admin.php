@@ -75,7 +75,7 @@ include '../Controllers/DataBaseController/db.php';
   
 
             <div class="col-xs-10-fluid  col-xs-offset-1" style="background-color:;">
-              <form action="AdminUpdate.php" method="post">
+              <form action="../Controllers/AdminController/AdminUpdate.php" method="post">
                 <fieldset class="scheduler-border">
                   <legend>Admin Details: </legend>
                   <label>Name:</label> 
