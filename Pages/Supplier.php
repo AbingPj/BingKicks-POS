@@ -3,10 +3,10 @@
 session_start();
 $numnum = 1;
 if($_SESSION['AdminLog'] != $numnum){
-header("Location: index.php");
+header("Location: ../index.php");
 }
 
-include 'db.php';
+include '../Controllers/DataBaseController/db.php';
 
 ?>
 <!DOCTYPE html>
@@ -14,8 +14,8 @@ include 'db.php';
 <head>
 	<meta charset="UTF-8">
 	<title>BingKicks Supplier</title>
-	<link rel="stylesheet"  href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet"  href="assets/css/custom.css">
+	<link rel="stylesheet"  href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet"  href="../assets/css/custom.css">
 </head>
 <body>
 
@@ -46,7 +46,7 @@ include 'db.php';
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 
-					<li><a href="Log-OUT.php">
+					<li><a href="../Controllers/DataBaseController/log-out.php">
 						<?php 
 						echo "".$_SESSION['Name']."  ";
 						?>
@@ -69,7 +69,7 @@ include 'db.php';
 
 
 						<div class="col-xs-9  col-xs-offset-2" style="background-color:;">
-							<form action="supplierinsert.php" method="post">
+							<form action="../Controllers/SupplierController/SupplierInsert.php" method="post">
 								<fieldset class="scheduler-border">
 									<legend>Add Supplier</legend>
 									<label>Supplier Company Name:</label>
@@ -99,7 +99,7 @@ include 'db.php';
 						<h3>Suppliers</h3> 
 						<div class="scrollable">           
 							<table class="table table-hover table-bordered" style=" border-style: solid; border-width: medium; border-color:blue;">
-								<thead>
+								<thead style="background-color:green;">
 									<tr>
 										<th>Supplier Company Name</th>
 										<th>Phone</th>
@@ -118,7 +118,7 @@ include 'db.php';
 									while($row = mysqli_fetch_array($result)){
 										
 										?>
-										<form action="SupplierEditRemove.php" method="post">
+										<form action="../Controllers/SupplierController/SupplierEditRemove.php" method="post">
 											<input type="hidden" name="id" value="<?php echo $row['id']; ?>"/>
 											<input type="hidden" name="name" value="<?php echo $row['name']; ?>"/>
 											<input type="hidden" name="phone" value="<?php echo $row['phone']; ?>"/>
@@ -162,7 +162,7 @@ include 'db.php';
 &copy;2017 BingKicks POS </p></center>
 
 </footer>
-			<script src="assets/js/jquery-3.2.1.min.js"></script>
-			<script src="assets/js/bootstrap.min.js"></script>
+			<script src="../assets/js/jquery-3.2.1.min.js"></script>
+			<script src="../assets/js/bootstrap.min.js"></script>
 		</body>
 		</html>

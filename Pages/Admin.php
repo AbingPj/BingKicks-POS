@@ -3,18 +3,18 @@
 session_start();
 $numnum = 1;
 if($_SESSION['AdminLog'] != $numnum){
-header("Location: index.php");
+header("Location: ../index.php");
 }
 
-include 'db.php';
+include '../Controllers/DataBaseController/db.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>BingKicks Admin</title>
-	<link rel="stylesheet"  href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet"  href="assets/css/custom.css">
+	<link rel="stylesheet"  href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet"  href="../assets/css/custom.css">
 </head>
 <body>
 
@@ -47,7 +47,7 @@ include 'db.php';
         </ul>
         <ul class="nav navbar-nav navbar-right">
 
-          <li><a href="Log-OUT.php">
+          <li><a href="../Controllers/DataBaseController/log-out.php">
             <?php 
             echo "".$_SESSION['Name']."  ";
             ?>
@@ -75,7 +75,7 @@ include 'db.php';
   
 
             <div class="col-xs-10-fluid  col-xs-offset-1" style="background-color:;">
-              <form action="AdminUpdate.php" method="post">
+              <form action="../Controllers/AdminController/AdminUpdate.php" method="post">
                 <fieldset class="scheduler-border">
                   <legend>Admin Details: </legend>
                   <label>Name:</label> 
@@ -135,8 +135,8 @@ include 'db.php';
 &copy;2017 BingKicks POS </p></center>
 
 </footer>     
-<script src="assets/js/jquery-3.2.1.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/jquery-3.2.1.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
 </body>
 </html>
 

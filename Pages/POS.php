@@ -3,19 +3,19 @@ session_start();
 
 $numnum = 1;
 if($_SESSION['AdminLog'] != $numnum){
-header("Location: index.php");
+header("Location: ../index.php");
 }
 
-include 'db.php';
+include '../Controllers/DataBaseController/db.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>BF.POS</title>
-	<link rel="stylesheet"  href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet"  href="assets/css/custom2.css">
-  <link rel="stylesheet"  href="assets/css/custom.css">
+	<link rel="stylesheet"  href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet"  href="../assets/css/custom2.css">
+  <link rel="stylesheet"  href="../assets/css/custom.css">
 
 
 
@@ -53,7 +53,7 @@ include 'db.php';
         </ul>
         <ul class="nav navbar-nav navbar-right">
 
-          <li><a href="Log-OUT.php">
+          <li><a href="../Controllers/DataBaseController/log-out.php">
             <?php 
             echo "".$_SESSION['Name']."  ";
             ?>
@@ -92,11 +92,11 @@ include 'db.php';
                        {?>
                      <div class='col-sm-3 '>
                       <div class='thumbnail'>
-                       <img style='width: 150px; height: 100px' src='assets/img/<?php echo $row['img_name'];?>' alt='Cinque Terre' width='300' height='236'>
+                       <img style='width: 150px; height: 100px' src='../assets/img/<?php echo $row['img_name'];?>' alt='Cinque Terre' width='300' height='236'>
                        <div class='caption'>
                          <p><b><?php echo $row['name'];     ?> </b>
                           <br><?php echo $row['price'];      ?> </p>
-                          <form method="post" action="POSaddtokart.php">
+                          <form method="post" action="../Controllers/POSController/POSaddtokart.php">
                           <input type="hidden" name="id" value="<?php echo $row['id']; ?>" >
                           <input type="submit" name="submit" value="add" class="btn btn-info btn-xs">
                           </form>
@@ -126,11 +126,11 @@ include 'db.php';
                    {?>
                  <div class='col-sm-3 '>
                   <div class='thumbnail'>
-                   <img style='width: 150px; height: 100px' src='assets/img/<?php echo $row['img_name'];?>' alt='Cinque Terre' width='300' height='236'>
+                   <img style='width: 150px; height: 100px' src='../assets/img/<?php echo $row['img_name'];?>' alt='Cinque Terre' width='300' height='236'>
                    <div class='caption'>
                      <p><b><?php echo $row['name'];     ?> </b>
                       <br><?php echo $row['price'];      ?> </p>
-                        <form method="post" action="POSaddtokart.php">
+                        <form method="post" action="../Controllers/POSController/POSaddtokart.php">
                           <input type="hidden" name="id" value="<?php echo $row['id']; ?>" >
                           <input type="submit" name="submit" value="add" class="btn btn-info btn-xs">
                           </form>
@@ -157,11 +157,11 @@ include 'db.php';
                    {?>
                  <div class='col-sm-3 '>
                   <div class='thumbnail'>
-                   <img style='width: 150px; height: 100px' src='assets/img/<?php echo $row['img_name'];?>' alt='Cinque Terre' width='300' height='236'>
+                   <img style='width: 150px; height: 100px' src='../assets/img/<?php echo $row['img_name'];?>' alt='Cinque Terre' width='300' height='236'>
                    <div class='caption'>
                      <p><b><?php echo $row['name'];     ?> </b>
                       <br><?php echo $row['price'];      ?> </p>
-                        <form method="post" action="POSaddtokart.php">
+                        <form method="post" action="../Controllers/POSController/POSaddtokart.php">
                           <input type="hidden" name="id" value="<?php echo $row['id']; ?>" >
                           <input type="submit" name="submit" value="add" class="btn btn-info btn-xs">
                           </form>
@@ -212,7 +212,7 @@ include 'db.php';
           <center>
             <?php echo " ".$row['id'] ?>
           <br>
-           <form method="post" action="POSremove.php">
+           <form method="post" action="../Controllers/POSController/POSremove.php">
            <input type="hidden" name="id" value="<?php echo $row['id']; ?>" >
           <input type="submit" name="remove" value="remove" class="btn btn-info btn-xs">
          
@@ -234,7 +234,7 @@ include 'db.php';
         <h4 class="modal-title" id="myModalLabel">Change Quantity</h4>
       </div>
       <div class="modal-body">
-      <form method="post" action="POSupdate.php"><center>
+      <form method="post" action="../Controllers/POSController/POSupdate.php"><center>
       <input type="hidden" name="id" value="<?php echo $row['id']; ?>" >
       <input type="number" name="quantity" value="<?php echo $row['quantity']; ?>" >  
       <input type="submit" name="update" value="save changes" class="btn btn-info btn-xs"></center>
@@ -263,12 +263,12 @@ include 'db.php';
                            echo "<font size='3' class='bg-danger' > $Message </font>";
             }
      ?></h2>
-  <form method="post" action="POSpaymentAndcancel.php">
+  <form method="post" action="../Controllers/POSController/POSpaymentAndcancel.php">
     <input type="number" name="cash" class="input-md form-control" placeholder="Customer Cash" required>
     <input type="submit" name="submitcash" value="PAY" class="btn btn-lg btn-primary btn-block">
     
   </form>
-  <form method="post" action="POSpaymentAndcancel.php">
+  <form method="post" action="../Controllers/POSController/POSpaymentAndcancel.php">
       <input type="submit" name="submitcancel" value="CANCEL" class="btn btn-sm btn-danger btn-block">
    </form>
 
@@ -289,8 +289,8 @@ include 'db.php';
 
 
 
-<script src="assets/js/jquery-3.2.1.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/jquery-3.2.1.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
 
 
 </body>

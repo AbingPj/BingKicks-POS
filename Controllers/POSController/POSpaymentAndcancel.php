@@ -2,14 +2,14 @@
 session_start();
                         
 
-include 'db.php';
+include '../../Controllers/DataBaseController/db.php';
 
 if(isset($_POST['submitcash'])){
   $totals = $_SESSION['totals'];
   $admin_id = $_SESSION['admin_id'];
   $cash = $_POST['cash'];
   if($cash < $totals){
-    header( "Location: pos.php?msg3" ); 
+    header( "Location: ../../Pages/POS.php?msg3" ); 
   }else{
     
 
@@ -26,7 +26,7 @@ if(isset($_POST['submitcash'])){
     $query="ALTER TABLE orderkart AUTO_INCREMENT = 1";
     mysqli_query($db,$query);
 
-    header( "Location: pos.php"); 
+    header( "Location: ../../Pages/POS.php"); 
 
 
   }
@@ -38,7 +38,7 @@ if(isset($_POST['submitcancel'])){
 
   $query="ALTER TABLE orderkart AUTO_INCREMENT = 1";
   mysqli_query($db,$query);
-  header( "Location: pos.php"); 
+  header( "Location: ../../Pages/POS.php"); 
 
  //$query="Truncate table orderkart";
   //mysqli_query($db,$query);

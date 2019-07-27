@@ -1,5 +1,5 @@
 <?php
-include 'db.php';
+include '../../Controllers/DataBaseController/db.php';
 
 if(isset($_POST['change'])){
 	$id = $_POST['admin_id'];
@@ -15,10 +15,10 @@ if(isset($_POST['change'])){
 
 			$query="UPDATE admin SET name = '$name' , username = '$UserName', password = '$Password' WHERE id = '$id' ";
 	mysqli_query($db,$query);
-	header( "Location: admin.php?msg1" ); 
+	header( "Location: ../../Pages/Admin.php?msg1" ); 
 	}
 	else {
-		header("Location:admin.php?msg2");
+		header("Location: ../../Pages/Admin.php?msg2");
 	}
 
 }

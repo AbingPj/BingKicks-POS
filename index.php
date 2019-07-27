@@ -47,7 +47,7 @@ session_start();
 								<div class="row">
 									<?php
 									echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-									include 'db.php';
+									include 'Controllers/DataBaseController/db.php';
 									if(isset($_POST['submit'])){
 										$myusername=$_POST['username']; 
 										$mypassword=$_POST['password']; 
@@ -61,12 +61,10 @@ session_start();
 											while($row = mysqli_fetch_array($result)){
 												$_SESSION['admin_id'] = $row['id'];
 												$_SESSION['username'] = $row['UserName'];
-												$_SESSION['Name'] = $row['Name'];	
-												
-													
+												$_SESSION['Name'] = $row['Name'];
 											}
 											$_SESSION['AdminLog'] = 1;
-											header("location:pos.php");
+											header("location:pages/pos.php");
 										}
 										else {
 											echo "Wrong Username or Password";

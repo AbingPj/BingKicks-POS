@@ -3,7 +3,7 @@
 session_start();
 $numnum = 1;
 if($_SESSION['AdminLog'] != $numnum){
-header("Location: index.php");
+header("Location: ../index.php");
 }
 
 ?>
@@ -12,8 +12,8 @@ header("Location: index.php");
 <head>
 	<meta charset="UTF-8">
 	<title>BingKicks Admin</title>
-	<link rel="stylesheet"  href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet"  href="assets/css/custom.css">
+	<link rel="stylesheet"  href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet"  href="../assets/css/custom.css">
 </head>
 <body>
 
@@ -46,7 +46,7 @@ header("Location: index.php");
         </ul>
         <ul class="nav navbar-nav navbar-right">
 
-          <li><a href="Log-OUT.php">
+          <li><a href="../Controllers/DataBaseController/log-out.php">
             <?php 
             echo "".$_SESSION['Name']."  ";
             ?>
@@ -72,7 +72,7 @@ header("Location: index.php");
   
 
             <div class="col-xs-10-fluid  col-xs-offset-1" style="background-color:;">
-              <form action="SupplierEditUpdate.php" method="post">
+              <form action="../Controllers/SupplierController/SupplierEditUpdate.php" method="post">
                 <fieldset class="scheduler-border">
                   <legend>Supplier:</legend>
                   <label>New Supplier Company Name:</label>
@@ -127,7 +127,7 @@ header("Location: index.php");
 
 
 </footer>
-      <script src="assets/js/jquery-3.2.1.min.js"></script>
-      <script src="assets/js/bootstrap.min.js"></script>
+      <script src="../assets/js/jquery-3.2.1.min.js"></script>
+      <script src="../assets/js/bootstrap.min.js"></script>
     </body>
     </html>
