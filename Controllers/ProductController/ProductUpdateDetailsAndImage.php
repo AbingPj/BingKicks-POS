@@ -1,6 +1,6 @@
 <?php 
 //ProductUpdateDetails.php
-include 'db.php';
+include '../../Controllers/DataBaseController/db.php';
 
 if(isset($_POST['UpdateDetails'])){
  $id= $_POST['product_id'];
@@ -12,7 +12,7 @@ if(isset($_POST['UpdateDetails'])){
  WHERE id = '$id' ";
  mysqli_query($db,$query);
  //echo "<meta http-equiv='refresh' content='0'>";
- header("Location:Product.php" ); 
+ header("Location: ../../Pages/Product.php" ); 
 }
 
 

@@ -1,5 +1,5 @@
 <?php
-include 'db.php';
+include '../../Controllers/DataBaseController/db.php';
 if(isset($_POST['submit'])){
   $fileExt=strtolower(pathinfo($_FILES['file']['name'],PATHINFO_EXTENSION));
   $allowedExt=array("png","jpg","gif","jpeg"); 
@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
    mysqli_query($db,$query);
    //echo "Uploaded Successfully";
    //echo "<meta http-equiv='refresh' content='0'>";
-    header("Location:Product.php" ); 
+    header("Location: ../../Pages/Product.php" ); 
  
  }
 }
