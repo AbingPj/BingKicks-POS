@@ -1,8 +1,8 @@
 <?php
 session_start();
 $numnum = 1;
-if($_SESSION['AdminLog'] != $numnum){
-header("Location: ../index.php");
+if ($_SESSION['AdminLog'] != $numnum) {
+  header("Location: ../index.php");
 }
 
 include '../Controllers/DataBaseController/db.php';
@@ -55,7 +55,7 @@ include '../Controllers/DataBaseController/db.php';
 
         <li><a href="../Controllers/DataBaseController/log-out.php">
           <?php 
-          echo "".$_SESSION['Name']."  ";
+          echo "" . $_SESSION['Name'] . "  ";
           ?>
           <span class="glyphicon glyphicon-log-out"></span> Log-out</a></li>
         </ul>
@@ -101,11 +101,11 @@ include '../Controllers/DataBaseController/db.php';
                 <?php
 
 
-                $query="SELECT * FROM category";
-                $result=mysqli_query($db,$query);
+                $query = "SELECT * FROM category";
+                $result = mysqli_query($db, $query);
 
-                while($row = mysqli_fetch_array($result)){
-                  echo "<option value='".$row['id']."'>".$row['name']."</option>";
+                while ($row = mysqli_fetch_array($result)) {
+                  echo "<option value='" . $row['id'] . "'>" . $row['name'] . "</option>";
                 }
                 ?>
 
@@ -116,11 +116,11 @@ include '../Controllers/DataBaseController/db.php';
               <select name="supplier" class="form-control">
                 <?php
 
-                $query="SELECT * FROM supplier";
-                $result=mysqli_query($db,$query);
+                $query = "SELECT * FROM supplier";
+                $result = mysqli_query($db, $query);
 
-                while($row = mysqli_fetch_array($result)){
-                  echo "<option value='".$row['id']."'>".$row['name']."</option>";
+                while ($row = mysqli_fetch_array($result)) {
+                  echo "<option value='" . $row['id'] . "'>" . $row['name'] . "</option>";
                 }
                 ?>
               </select>
@@ -163,23 +163,23 @@ include '../Controllers/DataBaseController/db.php';
 
                 <?php 
 
-                $query="SELECT * from product";
-                $result=mysqli_query($db,$query);
-                while($row = mysqli_fetch_array($result))
-                 {?>
+                $query = "SELECT * from product";
+                $result = mysqli_query($db, $query);
+                while ($row = mysqli_fetch_array($result)) { ?>
                <div class='col-sm-3 '>
                 <div class='thumbnail'>
-                 <img style='width: 150px; height: 100px' src='../assets/img/<?php echo $row['img_name'];?>' alt='Cinque Terre' width='300' height='236'>
+                 <img style='width: 150px; height: 100px' src='../assets/img/<?php echo $row['img_name']; ?>' alt='Cinque Terre' width='300' height='236'>
                  <div class='caption'>
-                   <p><b><?php echo $row['name'];     ?> </b>
-                    <br><?php echo $row['price'];      ?> </p>
+                   <p><b><?php echo $row['name']; ?> </b>
+                    <br><?php echo $row['price']; ?> </p>
                     <input type="button" name="edit" value="Edit" id="<?php echo $row['id']; ?>" class="btn btn-info btn-xs edit_data" />
                     <br> 
                   </div>
                 </div>
               </div>               
               <?php
-            } 
+
+            }
             ?>
           </div>
         </div>
@@ -194,23 +194,23 @@ include '../Controllers/DataBaseController/db.php';
 
             <?php 
 
-            $query="SELECT * from product WHERE Category='1' OR Category='3' ";
-            $result=mysqli_query($db,$query);
-            while($row = mysqli_fetch_array($result))
-             {?>
+            $query = "SELECT * from product WHERE Category='1' OR Category='3' ";
+            $result = mysqli_query($db, $query);
+            while ($row = mysqli_fetch_array($result)) { ?>
            <div class='col-sm-3 '>
             <div class='thumbnail'>
-             <img style='width: 150px; height: 100px' src='../assets/img/<?php echo $row['img_name'];?>' alt='Cinque Terre' width='300' height='236'>
+             <img style='width: 150px; height: 100px' src='../assets/img/<?php echo $row['img_name']; ?>' alt='Cinque Terre' width='300' height='236'>
              <div class='caption'>
-               <p><b><?php echo $row['name'];     ?> </b>
-                <br><?php echo $row['price'];      ?> </p>
+               <p><b><?php echo $row['name']; ?> </b>
+                <br><?php echo $row['price']; ?> </p>
                 <input type="button" name="edit" value="Edit" id="<?php echo $row['id']; ?>" class="btn btn-info btn-xs edit_data" />
                 <br> 
               </div>
             </div>
           </div>               
           <?php
-        } 
+
+        }
         ?>
       </div>
     </div>
@@ -227,23 +227,23 @@ include '../Controllers/DataBaseController/db.php';
 
       <?php 
 
-      $query="SELECT * from product WHERE Category='2' OR Category='4' ";
-      $result=mysqli_query($db,$query);
-      while($row = mysqli_fetch_array($result))
-       {?>
+      $query = "SELECT * from product WHERE Category='2' OR Category='4' ";
+      $result = mysqli_query($db, $query);
+      while ($row = mysqli_fetch_array($result)) { ?>
      <div class='col-sm-3 '>
       <div class='thumbnail'>
-       <img style='width: 150px; height: 100px' src='../assets/img/<?php echo $row['img_name'];?>' alt='Cinque Terre' width='300' height='236'>
+       <img style='width: 150px; height: 100px' src='../assets/img/<?php echo $row['img_name']; ?>' alt='Cinque Terre' width='300' height='236'>
        <div class='caption'>
-         <p><b><?php echo $row['name'];     ?> </b>
-          <br><?php echo $row['price'];      ?> </p>
+         <p><b><?php echo $row['name']; ?> </b>
+          <br><?php echo $row['price']; ?> </p>
           <input type="button" name="edit" value="Edit" id="<?php echo $row['id']; ?>" class="btn btn-info btn-xs edit_data" />
           <br> 
         </div>
       </div>
     </div>               
     <?php
-  } 
+
+  }
   ?>
 </div>
 </div>
@@ -291,7 +291,7 @@ include '../Controllers/DataBaseController/db.php';
    <div class="modal-body">  
 
 
-    <form action="../Controllers/ProductController/ProductUpdateDetailsAndImage.php" method="post"  enctype="multipart/form-data">  
+    <form action="../Controllers/ProductController/ProductUpdateDetails.php" method="post"  enctype="multipart/form-data">  
       <input type="hidden" name="product_id" id="product_id" >  
 
 
@@ -308,11 +308,11 @@ include '../Controllers/DataBaseController/db.php';
         <?php
 
 
-        $query="SELECT * FROM category";
-        $result=mysqli_query($db,$query);
+        $query = "SELECT * FROM category";
+        $result = mysqli_query($db, $query);
 
-        while($row = mysqli_fetch_array($result)){
-          echo "<option value='".$row['id']."'>".$row['name']."</option>";
+        while ($row = mysqli_fetch_array($result)) {
+          echo "<option value='" . $row['id'] . "'>" . $row['name'] . "</option>";
         }
         ?>
 
@@ -322,11 +322,11 @@ include '../Controllers/DataBaseController/db.php';
       <select name="supplier" id="supplier" class="form-control">
         <?php
 
-        $query="SELECT * FROM supplier";
-        $result=mysqli_query($db,$query);
+        $query = "SELECT * FROM supplier";
+        $result = mysqli_query($db, $query);
 
-        while($row = mysqli_fetch_array($result)){
-          echo "<option value='".$row['id']."'>".$row['name']."</option>";
+        while ($row = mysqli_fetch_array($result)) {
+          echo "<option value='" . $row['id'] . "'>" . $row['name'] . "</option>";
         }
         ?>
       </select>

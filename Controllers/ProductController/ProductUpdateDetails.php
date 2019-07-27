@@ -21,12 +21,12 @@ if(isset($_POST['ChangeImage'])){
   if(in_array($fileExt,$allowedExt)){
    $id= $_POST['product_id'];
    $img_name = $_FILES['file']['name'];
-   move_uploaded_file($_FILES['file']['tmp_name'], "assets/img/" . $img_name);
+   move_uploaded_file($_FILES['file']['tmp_name'], "../../assets/img/" . $img_name);
    $query="UPDATE product SET img_name = '$img_name'  
    WHERE id = '$id' ";
    mysqli_query($db,$query);
    //echo "<meta http-equiv='refresh' content='0'>";
-   header("Location:Product.php" ); 
+   header("Location:../../Pages/Product.php" ); 
 
  }
 }

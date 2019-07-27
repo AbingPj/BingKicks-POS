@@ -9,7 +9,7 @@ if(isset($_POST['submit'])){
    $supplier = $_POST['supplier'];
    $price = $_POST['price'];
    $img_name = $_FILES['file']['name'];
-   move_uploaded_file($_FILES['file']['tmp_name'], "assets/img/" . $img_name);
+   move_uploaded_file($_FILES['file']['tmp_name'], "../../assets/img/" . $img_name);
    $query="INSERT INTO product(name, category, supplier, price, img_name) 
    VALUES ('$name', '$category', '$supplier', '$price', '$img_name' )";
    mysqli_query($db,$query);
